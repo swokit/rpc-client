@@ -2,7 +2,7 @@
 
 <phpunit backupGlobals="false"
          backupStaticAttributes="false"
-         bootstrap="test/boot.php"
+         bootstrap="./test/boot.php"
          colors="false"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
@@ -10,14 +10,14 @@
          stopOnFailure="false"
 >
   <testsuites>
-    <testsuite name="Php Library Test Suite">
-      <directory>libs/*/test</directory>
+    <testsuite name="Php Server Test Suite">
+      <directory>test/</directory>
     </testsuite>
   </testsuites>
 
   <filter>
     <whitelist>
-      <directory suffix=".php">libs/*/src</directory>
+      <directory suffix=".php">src</directory>
     </whitelist>
   </filter>
 </phpunit>

@@ -1,15 +1,13 @@
 {
-  "name": "swokit/swokit",
+  "name": "swokit/rpc-client",
   "type": "library",
-  "description": "some utils tool library for the php swoole ext",
+  "description": "a php rpc powered by swoole",
   "keywords": [
     "library",
-    "tool",
-    "php",
-    "swoole",
-    "swokit"
+    "rpc-client",
+    "swoole"
   ],
-  "homepage": "https://github.com/swokit/swokit",
+  "homepage": "https://github.com/swokit/rpc-client",
   "license": "MIT",
   "authors": [
     {
@@ -19,42 +17,14 @@
     }
   ],
   "require": {
-    "php": ">7.1.0",
-    "psr/log": "^1.0",
-    "inhere/console": "dev-master",
-    "php-comp/http-message": "~1.0",
-    "toolkit/pool": "~1.0",
-    "toolkit/php-utils": "~1.0",
-    "toolkit/sys-utils": "~1.0"
+    "php": ">7.1.0"
   },
   "autoload": {
     "psr-4": {
-      "Swokit\\Pool\\": "libs/conn-pool/src/",
-      "Swokit\\Server\\": "libs/server/src/",
-      "Swokit\\Rpc\\Server\\": "libs/rpc-server/src/",
-      "Swokit\\Rpc\\Client\\": "libs/rpc-client/src/",
-      "Swokit\\Http\\Server\\": "libs/http-server/src/",
-      "Swokit\\WebSocket\\Server\\": "libs/websocket-server/src/",
-      "Swokit\\Process\\": "libs/process/src/",
-      "Swokit\\Task\\": "libs/task/src/",
-      "Swokit\\Util\\": "libs/utils/src/"
-    },
-    "files": [
-      "libs/utils/src/functions.php"
-    ]
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    }
-  },
-  "repositories": {
-    "packagist": {
-      "type": "composer",
-      "url": "https://packagist.phpcomposer.com"
+      "Swokit\\Rpc\\Client\\": "src/"
     }
   },
   "suggest": {
-    "inhere/php-validate": "Very lightweight data validate tool",
+    "ext-swoole": "The swoole extension is required for running"
   }
 }
